@@ -1828,7 +1828,7 @@ GameObject:
   - component: {fileID: 1240305389}
   - component: {fileID: 1240305388}
   m_Layer: 0
-  m_Name: arrow
+  m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2729,6 +2729,7 @@ MonoBehaviour:
   ReelPanel: {fileID: 44061804}
   ReelResult: {fileID: 1810959298}
   ResultTextPrefab: {fileID: 2870731244516074105, guid: 27a1e2ae6898c024ab133767f3d25047, type: 3}
+  arrow: {fileID: 1240305387}
   ScoreText: {fileID: 1588745618}
 --- !u!114 &1624706527
 MonoBehaviour:
