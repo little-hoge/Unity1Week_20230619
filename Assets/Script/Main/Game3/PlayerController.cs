@@ -120,6 +120,7 @@ namespace Unity1Week_20230619.Main.Game3
         {
             if (requestDict[Seasoning.White] < 0 || requestDict[Seasoning.Gray] < 0)
             {
+                SoundManager.Instance.PlaySe(3);
                 miss++;
                 RequestNext();
                 missimg.SetActive(true);
@@ -132,6 +133,7 @@ namespace Unity1Week_20230619.Main.Game3
             }
             else if (requestDict[Seasoning.White] == 0 && requestDict[Seasoning.Gray] == 0)
             {
+                SoundManager.Instance.PlaySe(0);
                 success++;
                 RequestNext();
                 successimg.SetActive(true);
