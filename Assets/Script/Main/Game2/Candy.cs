@@ -37,8 +37,10 @@ public class Candy : MonoBehaviour
 
 
 
-    void Init()
+    public void Init()
     {
+        TryGetComponent(out spriteRenderer);
+        TryGetComponent(out rigidbody2D);
         candyType = (CandyType)(Random.Range((int)CandyType.SMALL, (int)CandyType.TYPE_NUM));
         CandyInfo candyInfo = candiesList[(int)candyType];
         spriteRenderer.sprite = candyInfo.graphic;
@@ -51,8 +53,6 @@ public class Candy : MonoBehaviour
 
     private void Awake()
     {
-        TryGetComponent(out spriteRenderer);
-        TryGetComponent(out rigidbody2D);
         Init();
     }
 
