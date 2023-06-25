@@ -27,7 +27,7 @@ namespace Unity1Week_20230619.Main.Game2
 
         public void Init()
         {
-
+            isAlive = true;
         }
 
         void AddScore(ref long score)
