@@ -13,6 +13,8 @@ namespace Unity1Week_20230619.Main.Game2
 
         private bool isAlive = true;
         private long score = 0;
+        [SerializeField] private float speed;
+        [SerializeField] private Rigidbody2D rigidbody2D;
 
         bool attack = false;
         public void Init()
@@ -33,12 +35,12 @@ namespace Unity1Week_20230619.Main.Game2
  
             if (Input.GetKey(KeyCode.RightArrow))
             {
-                transform.position += new Vector3(3f, 0f, 0f);
+                rigidbody2D.velocity = new Vector2(speed, 0.0f);
 
             }
             else if (Input.GetKey(KeyCode.LeftArrow))
             {
-                transform.position += new Vector3(-3f, 0f, 0f);
+                rigidbody2D.velocity = new Vector2(-speed, 0.0f);
             }
 
         }

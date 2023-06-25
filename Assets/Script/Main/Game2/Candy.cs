@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 using UnityEngine;
 
-public class Candy : MonoBehaviour, IFallObject
+public class Candy : MonoBehaviour
 {
     // キャンディの種類
     public enum CandyType
@@ -37,14 +37,14 @@ public class Candy : MonoBehaviour, IFallObject
 
 
 
-    void IFallObject.Init()
+    void Init()
     {
+        candyType = (CandyType)(Random.Range((int)CandyType.SMALL, (int)CandyType.TYPE_NUM));
         CandyInfo candyInfo = candiesList[(int)candyType];
-        candyType = (CandyType)(Random.Range((int)CandyType.SMALL, (int)CandyType.LARGE));
         spriteRenderer.sprite = candyInfo.graphic;
         score = candyInfo.score;
         speed = Random.Range(2.0f, 5.0f);
-        rigidbody2D.velocity = new Vector2(0.0f, speed);
+        rigidbody2D.velocity = new Vector2(0.0f, -speed);
 
         
     }
@@ -53,6 +53,7 @@ public class Candy : MonoBehaviour, IFallObject
     {
         TryGetComponent(out spriteRenderer);
         TryGetComponent(out rigidbody2D);
+        Init();
     }
 
     // Start is called before the first frame update
@@ -67,10 +68,6 @@ public class Candy : MonoBehaviour, IFallObject
         
     }
 
-    void IFallObject.Update()
-    {
-        
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
