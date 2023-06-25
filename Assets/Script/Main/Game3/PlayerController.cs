@@ -27,9 +27,10 @@ namespace Unity1Week_20230619.Main.Game3
         Transform Cooking;
         GameObject missimg;
 
-        readonly Vector3 SaltDefaultPos = new Vector3(5, 2, 0);
-        readonly Vector3 PepperDefaultPos = new Vector3(7, 2, 0);
-        readonly Vector3 CookingDefaultPos = new Vector3(0, -2, 0);
+        readonly Vector3 SaltDefaultPos = new Vector3(5f, -3f, 0);
+        readonly Vector3 PepperDefaultPos = new Vector3(7f, -3f, 0);
+        readonly Vector3 CookingDefaultPos = new Vector3(0, 0, 0);
+        readonly Vector3 ArrowDefaultPos = new Vector3(5f, -4.5f, 0);
 
         Seasoning select_seasoning;
         Dictionary<Seasoning, int> requestDict = new Dictionary<Seasoning, int>();
@@ -55,7 +56,7 @@ namespace Unity1Week_20230619.Main.Game3
             White.rotation = Quaternion.identity;
             Gray.position = PepperDefaultPos;
             Gray.rotation = Quaternion.identity;
-            Arrow.position = new Vector3(White.position.x, 0.5f, 0);
+            Arrow.position = new Vector3(White.position.x, ArrowDefaultPos.y, 0);
             Cooking.position = CookingDefaultPos;
             Cooking.rotation = Quaternion.identity;
             select_seasoning = Seasoning.White;
@@ -67,9 +68,9 @@ namespace Unity1Week_20230619.Main.Game3
 
         void CalcShake(Transform obj, Vector3 defaultPos)
         {
-            obj.position = new Vector3(2f, -1f);
+            obj.position = new Vector3(2f, 1.5f);
             obj.rotation = Quaternion.Euler(0f, 0f, 100f);
-            obj.DOLocalMove(new Vector3(1.5f, -1f), 0.2f)
+            obj.DOLocalMove(new Vector3(1.5f, 1.5f), 0.2f)
                 .OnComplete(() =>
                 {
                     obj.position = defaultPos;
@@ -98,12 +99,12 @@ namespace Unity1Week_20230619.Main.Game3
 
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
-                Arrow.position = new Vector3(SaltDefaultPos.x, 0.5f, 0);
+                Arrow.position = new Vector3(SaltDefaultPos.x, ArrowDefaultPos.y, 0);
                 select_seasoning = Seasoning.White;
             }
             if (Input.GetKeyDown(KeyCode.RightArrow))
             {
-                Arrow.position = new Vector3(PepperDefaultPos.x, 0.5f, 0);
+                Arrow.position = new Vector3(PepperDefaultPos.x, ArrowDefaultPos.y, 0);
                 select_seasoning = Seasoning.Gray;
 
             }
