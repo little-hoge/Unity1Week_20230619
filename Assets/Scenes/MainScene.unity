@@ -7796,6 +7796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   miniGameObject: {fileID: 7005632409796835693}
+  playerController: {fileID: 0}
 --- !u!114 &1624706530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9429,7 +9430,7 @@ PrefabInstance:
     - target: {fileID: 1728919796091406605, guid: 346f8284289905d4086ca65a6684c346, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1762838573, guid: b42260fa258110745b351f385b06e55c, type: 3}
+      objectReference: {fileID: -1502573848, guid: 4e070958d823a0d46b2b82b5b4e07f2d, type: 3}
     - target: {fileID: 1728919796091406605, guid: 346f8284289905d4086ca65a6684c346, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -9593,7 +9594,7 @@ PrefabInstance:
     - target: {fileID: 4450155058116832128, guid: 346f8284289905d4086ca65a6684c346, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6bacb257de377d64aa37732ab5ee405f, type: 3}
+      objectReference: {fileID: 21300000, guid: 1e0bbb6191e09dd4086240fc39402233, type: 3}
     - target: {fileID: 4450155058116832128, guid: 346f8284289905d4086ca65a6684c346, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -9629,7 +9630,7 @@ PrefabInstance:
     - target: {fileID: 4450155058684461226, guid: 346f8284289905d4086ca65a6684c346, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -811197160, guid: b42260fa258110745b351f385b06e55c, type: 3}
+      objectReference: {fileID: 1757428708, guid: 4e070958d823a0d46b2b82b5b4e07f2d, type: 3}
     - target: {fileID: 4450155058684461226, guid: 346f8284289905d4086ca65a6684c346, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
