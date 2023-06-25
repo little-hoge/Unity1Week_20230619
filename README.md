@@ -31,6 +31,13 @@ unity 2021.3.26f1
 |[Unityroom Client Library](https://github.com/naichilab/unityroom-client-library)|0.9.4|
 
 ## 素材
+BGM
 - https://dova-s.jp/bgm/play12973.html
+
+めもわーるまる
+- https://fontnya.com/memoir/
+
+その他文字
+- https://itouhiro.hatenablog.com/entry/20130602/font
 
 
