@@ -7,6 +7,7 @@ public class FallObjectSpawner : MonoBehaviour
 {
     [SerializeField] private List<GameObject> fallObjects = new List<GameObject>();
     [SerializeField] private float spawnInterval;
+    private const float MAX_SPAWN_INTERVAL = 2.0f;
     [SerializeField] private float range;
     private float time;
     private void Awake()
@@ -19,6 +20,7 @@ public class FallObjectSpawner : MonoBehaviour
     {
         time += Time.deltaTime;
         if (!IsSpawnTiming()) return;
+        spawnInterval = Random.Range(0.5f, MAX_SPAWN_INTERVAL);
         Instantiate(fallObjects[Random.Range(0, fallObjects.Count)],new Vector3(Random.Range(-(range * 0.5f), range * 0.5f),7.0f,0.0f), Quaternion.identity, transform.parent) ;
         time = 0.0f;
         
