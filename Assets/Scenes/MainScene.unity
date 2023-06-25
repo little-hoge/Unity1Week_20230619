@@ -9216,6 +9216,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2853649013237309678, guid: 346f8284289905d4086ca65a6684c346, type: 3}
+      propertyPath: m_Color.b
+      value: 0.72300005
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853649013237309678, guid: 346f8284289905d4086ca65a6684c346, type: 3}
+      propertyPath: m_Color.g
+      value: 0.72300005
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853649013237309678, guid: 346f8284289905d4086ca65a6684c346, type: 3}
+      propertyPath: m_Color.r
+      value: 0.72300005
+      objectReference: {fileID: 0}
     - target: {fileID: 2853649013373817610, guid: 346f8284289905d4086ca65a6684c346, type: 3}
       propertyPath: m_Name
       value: MiniGameObj_3
