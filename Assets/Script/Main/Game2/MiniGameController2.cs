@@ -21,14 +21,14 @@ namespace Unity1Week_20230619.Main.Game2
             if (gameState != GameState.Play) return;
 
             // TODO
-            if (Input.GetButtonDown("Submit") || timerController.ElapsedTime <= 0f)
+            if (!playerController.IsAlive || timerController.ElapsedTime <= 0f)
             {
                 gameState = GameState.End;
             }
 
             if (gameState == GameState.End && drawResultCoroutine == null)
             {
-                drawResultCoroutine = StartCoroutine(DrawResult(66,2));
+                drawResultCoroutine = StartCoroutine(DrawResult(playerController.GetScore(),2));
             }
         }
 
