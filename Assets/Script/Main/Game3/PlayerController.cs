@@ -25,7 +25,7 @@ namespace Unity1Week_20230619.Main.Game3
         
         Transform White, Gray, Arrow;
         Transform Cooking;
-        GameObject missimg;
+        GameObject missimg, successimg;
 
         readonly Vector3 SaltDefaultPos = new Vector3(5f, -3f, 0);
         readonly Vector3 PepperDefaultPos = new Vector3(7f, -3f, 0);
@@ -50,7 +50,9 @@ namespace Unity1Week_20230619.Main.Game3
             Arrow = transform.Find("Arrow");
             Cooking = transform.Find("Cooking");
             missimg = Cooking.GetChild(0).gameObject;
+            successimg = Cooking.GetChild(1).gameObject;
             missimg.SetActive(false);
+            successimg.SetActive(false);
 
             White.position = SaltDefaultPos;
             White.rotation = Quaternion.identity;
@@ -122,7 +124,7 @@ namespace Unity1Week_20230619.Main.Game3
                 RequestNext();
                 missimg.SetActive(true);
 
-                StartCoroutine(Function.DelayCoroutine(1f, () => {
+                StartCoroutine(Function.DelayCoroutine(0.5f, () => {
                     missimg.SetActive(false);
                 }));
                
@@ -132,6 +134,10 @@ namespace Unity1Week_20230619.Main.Game3
             {
                 success++;
                 RequestNext();
+                successimg.SetActive(true);
+                StartCoroutine(Function.DelayCoroutine(0.5f, () => {
+                    successimg.SetActive(false);
+                }));
             }
 
 
