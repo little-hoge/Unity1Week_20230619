@@ -17,6 +17,14 @@ namespace Unity1Week_20230619.Main.Game2
         [SerializeField] private Rigidbody2D rigidbody2D;
 
         bool attack = false;
+
+
+
+        private void Awake()
+        {
+            TryGetComponent(out rigidbody2D);
+        }
+
         public void Init()
         {
 
@@ -32,7 +40,7 @@ namespace Unity1Week_20230619.Main.Game2
 
 
 
- 
+
             if (Input.GetKey(KeyCode.RightArrow))
             {
                 rigidbody2D.velocity = new Vector2(speed, 0.0f);
@@ -42,21 +50,36 @@ namespace Unity1Week_20230619.Main.Game2
             {
                 rigidbody2D.velocity = new Vector2(-speed, 0.0f);
             }
+            else if(Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
+            {
+                rigidbody2D.velocity = Vector2.zero;
+            }
 
         }
 
         void OnTriggerEnter2D(Collider2D other)
         {
-            if(other.CompareTag("Arrow"))
-            {
-                isAlive = false;
-            }
 
-            if (other.CompareTag("Candy"))
+
+            switch (other.tag)
             {
-                long score = other.GetComponent<Candy>().GetScore();
-                AddScore(ref score);
+                case "Arrow":
+                    isAlive = false;
+                    SoundManager.Instance.PlaySe(2);
+                    Destroy(other.gameObject);
+                    break;
+                case "Candy":
+                    long score = other.GetComponent<Candy>().GetScore();
+                    AddScore(ref score);
+                    SoundManager.Instance.PlaySe(1);
+                    Destroy(other.gameObject);
+                    break;
+
             }
         }
+
+        public bool IsAlive { get { return isAlive; } }
+
+        public long GetScore() { return score; }
     }
 }

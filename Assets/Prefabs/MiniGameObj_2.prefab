@@ -296,8 +296,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: bdba299174e5ff64b94789ed8417ad23, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -755,6 +755,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FallObjectSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 4965411083004028078, guid: 408b107ebe6264c469b74bda22a6a1b7, type: 3}
+      propertyPath: range
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 6385431377036817815, guid: 408b107ebe6264c469b74bda22a6a1b7, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -815,7 +819,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1510651413979681192, guid: 0f8bbd812ec1cbe458ac8aa2edc4faa8, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1510651413979681192, guid: 0f8bbd812ec1cbe458ac8aa2edc4faa8, type: 3}
       propertyPath: m_SortingOrder
