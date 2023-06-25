@@ -6,6 +6,7 @@ namespace Unity1Week_20230619.Main.Game2
 {
     public class MiniGameController2 : MiniGameControllerBase, IController, IInitializa
     {
+        [SerializeField] private PlayerController playerController;
         public void Init()
         {
             base.Init(60);
@@ -15,6 +16,7 @@ namespace Unity1Week_20230619.Main.Game2
         public void Control()
         {
             base.TimeUpdate();
+            playerController.Control();
 
             if (gameState != GameState.Play) return;
 

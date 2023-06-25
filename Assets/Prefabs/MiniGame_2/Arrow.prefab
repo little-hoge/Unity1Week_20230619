@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3198645905933014323, guid: 636d62cf1ec012442bc2dad062cfee7e, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1559804715887063790, guid: 636d62cf1ec012442bc2dad062cfee7e, type: 3}
       propertyPath: m_Name
       value: Arrow
@@ -65,11 +69,15 @@ PrefabInstance:
       objectReference: {fileID: -475363307, guid: 68e158abf6c98af4097df6f700aea55a, type: 3}
     - target: {fileID: 9013668478059434639, guid: 636d62cf1ec012442bc2dad062cfee7e, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9013668478059434639, guid: 636d62cf1ec012442bc2dad062cfee7e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9013668478059434639, guid: 636d62cf1ec012442bc2dad062cfee7e, type: 3}
       propertyPath: m_SortingLayerID
-      value: 46784811
+      value: 790953799
       objectReference: {fileID: 0}
     - target: {fileID: 9013668478059434639, guid: 636d62cf1ec012442bc2dad062cfee7e, type: 3}
       propertyPath: m_WasSpriteAssigned
