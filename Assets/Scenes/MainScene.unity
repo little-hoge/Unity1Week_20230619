@@ -9216,6 +9216,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2853649013237309678, guid: 346f8284289905d4086ca65a6684c346, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853649013237309678, guid: 346f8284289905d4086ca65a6684c346, type: 3}
+      propertyPath: m_Color.b
+      value: 0.7735849
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853649013237309678, guid: 346f8284289905d4086ca65a6684c346, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7735849
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853649013237309678, guid: 346f8284289905d4086ca65a6684c346, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7735849
+      objectReference: {fileID: 0}
     - target: {fileID: 2853649013373817610, guid: 346f8284289905d4086ca65a6684c346, type: 3}
       propertyPath: m_Name
       value: MiniGameObj_3
@@ -9320,10 +9336,26 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 36.21
       objectReference: {fileID: 0}
+    - target: {fileID: 5861103002128344441, guid: 346f8284289905d4086ca65a6684c346, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -305967199, guid: a487f32e29c3a7340a88df09323d48e7, type: 3}
+    - target: {fileID: 5861103002128344441, guid: 346f8284289905d4086ca65a6684c346, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5861103002745651472, guid: 346f8284289905d4086ca65a6684c346, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 957319455}
+    - target: {fileID: 5861103002767085139, guid: 346f8284289905d4086ca65a6684c346, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -93001297, guid: bfa883aec2522ad4ca364ee0ee02bada, type: 3}
+    - target: {fileID: 5861103002767085139, guid: 346f8284289905d4086ca65a6684c346, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5861103003031679476, guid: 346f8284289905d4086ca65a6684c346, type: 3}
       propertyPath: m_Camera
       value: 
@@ -9332,6 +9364,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 957319455}
+    - target: {fileID: 8893106467326209246, guid: 346f8284289905d4086ca65a6684c346, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1057925300, guid: a487f32e29c3a7340a88df09323d48e7, type: 3}
+    - target: {fileID: 8893106467326209246, guid: 346f8284289905d4086ca65a6684c346, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 346f8284289905d4086ca65a6684c346, type: 3}
 --- !u!1001 &6456121286021641779
