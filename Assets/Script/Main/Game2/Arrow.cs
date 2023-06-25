@@ -10,7 +10,7 @@ public class Arrow : MonoBehaviour
     private float speed;
     void Init()
     {
-        speed = Random.Range(3.0f, 5.0f);
+        speed = Random.Range(4.5f, 6.0f);
         rigidbody2D.velocity = new Vector2(0.0f, -speed);
     }
 
