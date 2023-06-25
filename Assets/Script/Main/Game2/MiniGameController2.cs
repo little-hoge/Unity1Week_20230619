@@ -14,7 +14,7 @@ namespace Unity1Week_20230619.Main.Game2
         public void Init()
         {
             base.Init(60);
-            Announce.text = "MiniGameController2 \nに、チャレンジ！";
+            Announce.text = "あめゲー \nに、チャレンジ！";
 
             playerController = miniGameObject.transform.Find("Basket").GetComponent<PlayerController>();
             fallObjectSpawner = miniGameObject.transform.Find("FallObjectSpawner").GetComponent<FallObjectSpawner>();
