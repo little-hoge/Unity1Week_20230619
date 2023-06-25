@@ -23,6 +23,7 @@ namespace Unity1Week_20230619.Main.Game2
             fallObjectSpawner.gameObject.SetActive(false);
             fallObjectSpawner_1.gameObject.SetActive(false);
             fallObjectSpawner_2.gameObject.SetActive(false);
+            playerController.Init();
         }
 
         public void Control()
@@ -41,7 +42,7 @@ namespace Unity1Week_20230619.Main.Game2
 
             if(timerController.ElapsedTime <= 20f)
             {
-                fallObjectSpawner_2.gameObject.SetActive(true);
+                fallObjectSpawner_2.gameObjecSt.SetActive(true);
             }
 
             // TODO
