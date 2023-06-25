@@ -43,7 +43,7 @@ public class Candy : MonoBehaviour
         CandyInfo candyInfo = candiesList[(int)candyType];
         spriteRenderer.sprite = candyInfo.graphic;
         score = candyInfo.score;
-        speed = Random.Range(2.0f, 5.0f);
+        speed = Random.Range(4.5f, 6.0f);
         rigidbody2D.velocity = new Vector2(0.0f, -speed);
 
         
