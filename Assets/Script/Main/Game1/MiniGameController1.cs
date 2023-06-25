@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 namespace Unity1Week_20230619.Main.Game1
 {
@@ -19,7 +20,7 @@ namespace Unity1Week_20230619.Main.Game1
         {
             ResultText.Clear();
 
-            base.Init(60);
+            base.Init(30);
             Announce.text = "缶飛ばし \nに、チャレンジ！";
             ResultPanel.SetActive(false);
 
@@ -80,7 +81,7 @@ namespace Unity1Week_20230619.Main.Game1
             float distance = floorController.GetDistance();
             ResultText[0].text = $"{(Math.Floor(distance * 100) / 100).ToString()}M";
             ResultText[1].text = ((int)distance).ToString();
-            return (int)distance;
+            return Math.Clamp((int)distance, 0, int.MaxValue);
         }
 
         void UpdateAnnounce()

@@ -21,7 +21,7 @@ namespace Unity1Week_20230619.Main.Game0
         {
             ResultText.Clear();
 
-            base.Init(60);
+            base.Init(30);
             Announce.text = "モグラ叩き \nに、チャレンジ！";
 
             hammerController = miniGameObject.transform.Find("Hammer").GetComponent<HammerController>();
@@ -127,7 +127,8 @@ namespace Unity1Week_20230619.Main.Game0
                         break;
                 }
             }
-            return score;
+
+            return Math.Clamp(score, 0, int.MaxValue);
         }
     }
 }

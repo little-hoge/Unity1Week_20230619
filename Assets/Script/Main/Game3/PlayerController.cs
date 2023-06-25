@@ -2,6 +2,7 @@ using DG.Tweening;
 using System.Collections.Generic;
 using System.Reflection;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Unity1Week_20230619.Main.Game3
@@ -148,7 +149,8 @@ namespace Unity1Week_20230619.Main.Game3
 
         public int GetScore()
         {
-            return (success - miss) * (100 * point_offset);
+            int score = (success - miss) * (100 * point_offset);
+            return System.Math.Clamp(score, 0, int.MaxValue);
         }
     }
 }
