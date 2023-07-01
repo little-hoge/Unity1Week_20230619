@@ -147,8 +147,8 @@ namespace Unity1Week_20230619.Main.Game3
 
         void RequestNext()
         {
-            requestDict[Seasoning.White] = Random.Range(1, 10);
-            requestDict[Seasoning.Gray] = Random.Range(1, 10);
+            requestDict[Seasoning.White] = Random.Range(1, 5);
+            requestDict[Seasoning.Gray] = Random.Range(1, 5);
         }
 
         void RequestUpdate()
